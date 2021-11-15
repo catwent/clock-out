@@ -40,8 +40,8 @@ a {
 
 .back-rock img {
   z-index: 1;
-  max-height: 80%;
-  max-width: 80%;
+  max-height: 70%;
+  max-width: 70%;
   position: absolute;
   top:50%;
   left:50%;
