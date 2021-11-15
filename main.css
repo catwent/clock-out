@@ -1,0 +1,182 @@
+/* -----GENERAL STYLES-----*/
+
+@font-face {
+	font-family: Kleukens-Egyptienne-Light;
+	src: url(assets/fonts/Kleukens-Egyptienne-Light.otf);
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #fff;
+  font-family: Kleukens-Egyptienne-Light;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+
+
+
+/* -----BACK-----*/
+
+.back-container {
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.back-rock {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.back-rock img {
+  z-index: 1;
+  max-height: 80%;
+  max-width: 80%;
+  position: absolute;
+  top:50%;
+  left:50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+/* -----FRONT-----*/
+
+.front-container {
+  z-index: 2 !important;
+  position: absolute;
+}
+
+.front-content {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  width: 50vw;
+  height: 50vh;
+  background-color: none;
+  border-radius: 50%;
+  /* border: 8px solid #000; */
+  /* box-shadow: 2px 2px 8px 2px rgba(22, 45, 75, 0.92); */
+  position: relative;
+}
+
+/* round center */
+.clock::before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+/* round center style ends */
+
+
+/* common style for every hand */
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+  transform-origin: bottom;
+  /* border-top-left-radius: 7px;
+  border-top-right-radius: 7px; */
+}
+/* common style ends */
+
+.hour {
+  width: 14px;
+  height: 50%;
+  background-color: #000;
+}
+
+.second {
+  font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+/* -----ABOUT WINDOW----- */
+
+.about-window {
+  width: 100;
+  height: 100;
+  background-color: white;
+  opacity: 80%;
+  mix-blend-mode: difference;
+  z-index: 5;
+}
+
+.about-text {
+  padding: 10%;
+  font-size: 2rem;
+}
+
+
+
+
+
+
+/* -----ABOUT ROCK----- */
+
+.about-rock-position {
+  z-index: 8;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  max-width: 25%;
+  height: auto;
+}
+
+.about-rock-container {
+  position: relative;
+  text-align: center;
+}
+
+.about-rock {
+  max-width: 60%;
+  height: auto;
+  margin: 20px;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+}
+
+.question {
+  z-index: 999;
+  font-size: 2rem;
+  position: absolute;
+  margin: 25%;
+  top: -8;
+  left:0;
+  right:0;
+  bottom:0;
+}
